@@ -1,0 +1,3 @@
+/Users/igorkovalenko/CLionProjects/FT_PRINTF/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/igorkovalenko/CLionProjects/FT_PRINTF/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/igorkovalenko/CLionProjects/FT_PRINTF/cmake-build-debug/CMakeFiles/FT_PRINTF.dir
