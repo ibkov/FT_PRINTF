@@ -68,10 +68,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/igorkovalenko/CLionProjects/FT_PRINTF
+CMAKE_SOURCE_DIR = /Users/burswyck/Desktop/FT_PRINTF
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/igorkovalenko/CLionProjects/FT_PRINTF/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/burswyck/Desktop/FT_PRINTF/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/igorkovalenko/CLionProjects/FT_PRINTF/cmake-build-debug/CMakeFiles /Users/igorkovalenko/CLionProjects/FT_PRINTF/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/burswyck/Desktop/FT_PRINTF/cmake-build-debug/CMakeFiles /Users/burswyck/Desktop/FT_PRINTF/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/igorkovalenko/CLionProjects/FT_PRINTF/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/burswyck/Desktop/FT_PRINTF/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -143,6 +143,60 @@ FT_PRINTF/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FT_PRINTF.dir/build.make CMakeFiles/FT_PRINTF.dir/build
 .PHONY : FT_PRINTF/fast
 
+ft_printf.o: ft_printf.c.o
+
+.PHONY : ft_printf.o
+
+# target to build an object file
+ft_printf.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FT_PRINTF.dir/build.make CMakeFiles/FT_PRINTF.dir/ft_printf.c.o
+.PHONY : ft_printf.c.o
+
+ft_printf.i: ft_printf.c.i
+
+.PHONY : ft_printf.i
+
+# target to preprocess a source file
+ft_printf.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FT_PRINTF.dir/build.make CMakeFiles/FT_PRINTF.dir/ft_printf.c.i
+.PHONY : ft_printf.c.i
+
+ft_printf.s: ft_printf.c.s
+
+.PHONY : ft_printf.s
+
+# target to generate assembly for a file
+ft_printf.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FT_PRINTF.dir/build.make CMakeFiles/FT_PRINTF.dir/ft_printf.c.s
+.PHONY : ft_printf.c.s
+
+libft/ft_itoa.o: libft/ft_itoa.c.o
+
+.PHONY : libft/ft_itoa.o
+
+# target to build an object file
+libft/ft_itoa.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FT_PRINTF.dir/build.make CMakeFiles/FT_PRINTF.dir/libft/ft_itoa.c.o
+.PHONY : libft/ft_itoa.c.o
+
+libft/ft_itoa.i: libft/ft_itoa.c.i
+
+.PHONY : libft/ft_itoa.i
+
+# target to preprocess a source file
+libft/ft_itoa.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FT_PRINTF.dir/build.make CMakeFiles/FT_PRINTF.dir/libft/ft_itoa.c.i
+.PHONY : libft/ft_itoa.c.i
+
+libft/ft_itoa.s: libft/ft_itoa.c.s
+
+.PHONY : libft/ft_itoa.s
+
+# target to generate assembly for a file
+libft/ft_itoa.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FT_PRINTF.dir/build.make CMakeFiles/FT_PRINTF.dir/libft/ft_itoa.c.s
+.PHONY : libft/ft_itoa.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -179,6 +233,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... FT_PRINTF"
+	@echo "... ft_printf.o"
+	@echo "... ft_printf.i"
+	@echo "... ft_printf.s"
+	@echo "... libft/ft_itoa.o"
+	@echo "... libft/ft_itoa.i"
+	@echo "... libft/ft_itoa.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -1,6 +1,7 @@
 #include <stdio.h>
+#include "ft_print.h"
 
 int main() {
-	printf("Hello, World!\n");
+	ft_printf("%d", "123");
 	return 0;
 }

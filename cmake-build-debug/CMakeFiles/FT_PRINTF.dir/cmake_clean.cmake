@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/FT_PRINTF.dir/ft_printf.c.o"
+  "CMakeFiles/FT_PRINTF.dir/libft/ft_itoa.c.o"
   "CMakeFiles/FT_PRINTF.dir/main.c.o"
   "FT_PRINTF"
   "FT_PRINTF.pdb"

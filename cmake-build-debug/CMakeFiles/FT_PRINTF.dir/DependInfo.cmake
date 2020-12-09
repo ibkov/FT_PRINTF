@@ -4,7 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/igorkovalenko/CLionProjects/FT_PRINTF/main.c" "/Users/igorkovalenko/CLionProjects/FT_PRINTF/cmake-build-debug/CMakeFiles/FT_PRINTF.dir/main.c.o"
+  "/Users/burswyck/Desktop/FT_PRINTF/ft_printf.c" "/Users/burswyck/Desktop/FT_PRINTF/cmake-build-debug/CMakeFiles/FT_PRINTF.dir/ft_printf.c.o"
+  "/Users/burswyck/Desktop/FT_PRINTF/libft/ft_itoa.c" "/Users/burswyck/Desktop/FT_PRINTF/cmake-build-debug/CMakeFiles/FT_PRINTF.dir/libft/ft_itoa.c.o"
+  "/Users/burswyck/Desktop/FT_PRINTF/main.c" "/Users/burswyck/Desktop/FT_PRINTF/cmake-build-debug/CMakeFiles/FT_PRINTF.dir/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 
