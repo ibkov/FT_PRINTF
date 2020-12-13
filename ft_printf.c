@@ -18,7 +18,12 @@ int ft_printf(const char *str, ...)
 	int i;
 	va_list arg_ptr;
 	va_start(arg_ptr, str);
-	while ((i=va_arg(arg_ptr, int))!=-1)
-		ft_itoa(i);
-
+	while (*str != '%')
+	{
+		ft_putchar_fd(*str, 1);
+		str++;
+	}
+	// while ((i=va_arg(arg_ptr, int))!=-1)
+	// 	ft_itoa(i);
+	return 0;
 }

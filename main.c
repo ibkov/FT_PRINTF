@@ -2,6 +2,6 @@
 #include "ft_print.h"
 
 int main() {
-	ft_printf("%d", "123");
+	ft_printf("djklsahfdhkshf%d", "123");
 	return 0;
 }
