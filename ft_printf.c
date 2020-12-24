@@ -18,7 +18,6 @@ int ft_printf(const char *format, ...)
 	char *ch_to_per;
 
 	va_list arg_ptr;
-<<<<<<< HEAD
 	va_start(arg_ptr, format);
 	ft_find_precent((char*)format);
 	if (*format == '%' && *++format == 's')
@@ -32,7 +31,7 @@ int ft_printf(const char *format, ...)
 	// while ((i=va_arg(arg_ptr, int)) != -1)
 	// 	write(1, i, ft_str)
 	return (0);
-=======
+
 	va_start(arg_ptr, str);
 	while (*str != '%')
 	{
@@ -42,5 +41,5 @@ int ft_printf(const char *format, ...)
 	// while ((i=va_arg(arg_ptr, int))!=-1)
 	// 	ft_itoa(i);
 	return 0;
->>>>>>> cd90172a31daa344878063fd5c4d642caed98acb
+
 }
