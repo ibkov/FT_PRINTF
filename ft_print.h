@@ -16,8 +16,19 @@
 # include <stdarg.h>
 # include "libft/libft.h"
 
+
+typedef	struct		s_flags
+{
+	int				flags;
+    int				width;
+    int				precision;
+	int				type;
+	int				lenght;
+}					t_flags;
+
 int ft_printf(const char *format, ...);
 char *ft_find_precent(char *str);
+char ft_parse_modif(char *modif);
 
 
 #endif

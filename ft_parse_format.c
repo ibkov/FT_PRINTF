@@ -12,12 +12,23 @@ char *ft_find_precent(char *str)
     return (NULL);
 }
 
-int ft_analisys_str(char *format)
+char ft_parse_modif(char *modif)
 {
-    if (format)
+    char    *temp;
+    char    *begin;
+    char    *end;
+    int     len_modif;
+
+    if (modif)
     {
-        if (++*format == 's')
-            return (1);
+        temp = modif;
+        if (end = ft_strchr(modif, 's'))
+        {
+            end = '\0';
+        }
+        printf("%s",  modif);
+        len_modif = ft_strlen(modif);
+        printf("%d", len_modif);
     }
     return 0;
 }

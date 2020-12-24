@@ -16,17 +16,27 @@
 int ft_printf(const char *format, ...)
 {
 	char *ch_to_per;
+	char *arg;
 
+	ch_to_per = NULL;
+	arg = NULL;
 	va_list arg_ptr;
 	va_start(arg_ptr, format);
-	ft_find_precent((char*)format);
-	if (*format == '%' && *++format == 's')
-		ch_to_per = va_arg(arg_ptr, char*);
-		while (*ch_to_per){
-		ft_putchar_fd(*ch_to_per, 1);
-		ch_to_per++;
-		}
-
+	ch_to_per = ft_find_precent((char*)format);
+	ft_parse_modif(++ch_to_per);
+	// ch_to_per = (char*)format;
+	// while(ch_to_per)
+	// {
+	// if ((ch_to_per = ft_find_precent((char*)ch_to_per)) && (*ch_to_per == '%') && (ch_to_per[1] == 's'))
+	// 	arg = va_arg(arg_ptr, char*);
+	// 	while (*arg)
+	// 	{
+	// 		ft_putchar_fd(*arg, 1);
+	// 		arg++;
+	// 	}
+	// 	ch_to_per+=2;
+	// }
+	
 
 	// while ((i=va_arg(arg_ptr, int)) != -1)
 	// 	write(1, i, ft_str)
