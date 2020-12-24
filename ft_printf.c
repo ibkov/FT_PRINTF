@@ -31,15 +31,4 @@ int ft_printf(const char *format, ...)
 	// while ((i=va_arg(arg_ptr, int)) != -1)
 	// 	write(1, i, ft_str)
 	return (0);
-
-	va_start(arg_ptr, str);
-	while (*str != '%')
-	{
-		ft_putchar_fd(*str, 1);
-		str++;
-	}
-	// while ((i=va_arg(arg_ptr, int))!=-1)
-	// 	ft_itoa(i);
-	return 0;
-
 }
