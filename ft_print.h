@@ -16,6 +16,8 @@
 # include <stdarg.h>
 # include "libft/libft.h"
 
-int ft_printf(const char *, ...);
+int ft_printf(const char *format, ...);
+char *ft_find_precent(char *str);
+
 
 #endif

@@ -13,12 +13,22 @@
 #include "ft_print.h"
 #include <stdio.h>
 
-int ft_printf(const char *str, ...)
+int ft_printf(const char *format, ...)
 {
-	int i;
-	va_list arg_ptr;
-	va_start(arg_ptr, str);
-	while ((i=va_arg(arg_ptr, int))!=-1)
-		ft_itoa(i);
+	char *ch_to_per;
 
+	va_list arg_ptr;
+	va_start(arg_ptr, format);
+	ft_find_precent((char*)format);
+	if (*format == '%' && *++format == 's')
+		ch_to_per = va_arg(arg_ptr, char*);
+		while (*ch_to_per){
+		ft_putchar_fd(*ch_to_per, 1);
+		ch_to_per++;
+		}
+
+
+	// while ((i=va_arg(arg_ptr, int)) != -1)
+	// 	write(1, i, ft_str)
+	return (0);
 }
