@@ -131,71 +131,125 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named FT_PRINTF
+# Target rules for targets named ft_printf.c
 
 # Build rule for target.
-FT_PRINTF: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 FT_PRINTF
-.PHONY : FT_PRINTF
+ft_printf.c: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ft_printf.c
+.PHONY : ft_printf.c
 
 # fast build rule for target.
-FT_PRINTF/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FT_PRINTF.dir/build.make CMakeFiles/FT_PRINTF.dir/build
-.PHONY : FT_PRINTF/fast
+ft_printf.c/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf.c.dir/build.make CMakeFiles/ft_printf.c.dir/build
+.PHONY : ft_printf.c/fast
 
-ft_printf.o: ft_printf.c.o
+ft_parse_format.o: ft_parse_format.c.o
 
-.PHONY : ft_printf.o
-
-# target to build an object file
-ft_printf.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FT_PRINTF.dir/build.make CMakeFiles/FT_PRINTF.dir/ft_printf.c.o
-.PHONY : ft_printf.c.o
-
-ft_printf.i: ft_printf.c.i
-
-.PHONY : ft_printf.i
-
-# target to preprocess a source file
-ft_printf.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FT_PRINTF.dir/build.make CMakeFiles/FT_PRINTF.dir/ft_printf.c.i
-.PHONY : ft_printf.c.i
-
-ft_printf.s: ft_printf.c.s
-
-.PHONY : ft_printf.s
-
-# target to generate assembly for a file
-ft_printf.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FT_PRINTF.dir/build.make CMakeFiles/FT_PRINTF.dir/ft_printf.c.s
-.PHONY : ft_printf.c.s
-
-libft/ft_itoa.o: libft/ft_itoa.c.o
-
-.PHONY : libft/ft_itoa.o
+.PHONY : ft_parse_format.o
 
 # target to build an object file
-libft/ft_itoa.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FT_PRINTF.dir/build.make CMakeFiles/FT_PRINTF.dir/libft/ft_itoa.c.o
-.PHONY : libft/ft_itoa.c.o
+ft_parse_format.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf.c.dir/build.make CMakeFiles/ft_printf.c.dir/ft_parse_format.c.o
+.PHONY : ft_parse_format.c.o
 
-libft/ft_itoa.i: libft/ft_itoa.c.i
+ft_parse_format.i: ft_parse_format.c.i
 
-.PHONY : libft/ft_itoa.i
+.PHONY : ft_parse_format.i
 
 # target to preprocess a source file
-libft/ft_itoa.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FT_PRINTF.dir/build.make CMakeFiles/FT_PRINTF.dir/libft/ft_itoa.c.i
-.PHONY : libft/ft_itoa.c.i
+ft_parse_format.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf.c.dir/build.make CMakeFiles/ft_printf.c.dir/ft_parse_format.c.i
+.PHONY : ft_parse_format.c.i
 
-libft/ft_itoa.s: libft/ft_itoa.c.s
+ft_parse_format.s: ft_parse_format.c.s
 
-.PHONY : libft/ft_itoa.s
+.PHONY : ft_parse_format.s
 
 # target to generate assembly for a file
-libft/ft_itoa.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FT_PRINTF.dir/build.make CMakeFiles/FT_PRINTF.dir/libft/ft_itoa.c.s
-.PHONY : libft/ft_itoa.c.s
+ft_parse_format.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf.c.dir/build.make CMakeFiles/ft_printf.c.dir/ft_parse_format.c.s
+.PHONY : ft_parse_format.c.s
+
+libft/ft_putchar_fd.o: libft/ft_putchar_fd.c.o
+
+.PHONY : libft/ft_putchar_fd.o
+
+# target to build an object file
+libft/ft_putchar_fd.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf.c.dir/build.make CMakeFiles/ft_printf.c.dir/libft/ft_putchar_fd.c.o
+.PHONY : libft/ft_putchar_fd.c.o
+
+libft/ft_putchar_fd.i: libft/ft_putchar_fd.c.i
+
+.PHONY : libft/ft_putchar_fd.i
+
+# target to preprocess a source file
+libft/ft_putchar_fd.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf.c.dir/build.make CMakeFiles/ft_printf.c.dir/libft/ft_putchar_fd.c.i
+.PHONY : libft/ft_putchar_fd.c.i
+
+libft/ft_putchar_fd.s: libft/ft_putchar_fd.c.s
+
+.PHONY : libft/ft_putchar_fd.s
+
+# target to generate assembly for a file
+libft/ft_putchar_fd.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf.c.dir/build.make CMakeFiles/ft_printf.c.dir/libft/ft_putchar_fd.c.s
+.PHONY : libft/ft_putchar_fd.c.s
+
+libft/ft_strdup.o: libft/ft_strdup.c.o
+
+.PHONY : libft/ft_strdup.o
+
+# target to build an object file
+libft/ft_strdup.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf.c.dir/build.make CMakeFiles/ft_printf.c.dir/libft/ft_strdup.c.o
+.PHONY : libft/ft_strdup.c.o
+
+libft/ft_strdup.i: libft/ft_strdup.c.i
+
+.PHONY : libft/ft_strdup.i
+
+# target to preprocess a source file
+libft/ft_strdup.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf.c.dir/build.make CMakeFiles/ft_printf.c.dir/libft/ft_strdup.c.i
+.PHONY : libft/ft_strdup.c.i
+
+libft/ft_strdup.s: libft/ft_strdup.c.s
+
+.PHONY : libft/ft_strdup.s
+
+# target to generate assembly for a file
+libft/ft_strdup.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf.c.dir/build.make CMakeFiles/ft_printf.c.dir/libft/ft_strdup.c.s
+.PHONY : libft/ft_strdup.c.s
+
+libft/ft_strlen.o: libft/ft_strlen.c.o
+
+.PHONY : libft/ft_strlen.o
+
+# target to build an object file
+libft/ft_strlen.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf.c.dir/build.make CMakeFiles/ft_printf.c.dir/libft/ft_strlen.c.o
+.PHONY : libft/ft_strlen.c.o
+
+libft/ft_strlen.i: libft/ft_strlen.c.i
+
+.PHONY : libft/ft_strlen.i
+
+# target to preprocess a source file
+libft/ft_strlen.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf.c.dir/build.make CMakeFiles/ft_printf.c.dir/libft/ft_strlen.c.i
+.PHONY : libft/ft_strlen.c.i
+
+libft/ft_strlen.s: libft/ft_strlen.c.s
+
+.PHONY : libft/ft_strlen.s
+
+# target to generate assembly for a file
+libft/ft_strlen.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf.c.dir/build.make CMakeFiles/ft_printf.c.dir/libft/ft_strlen.c.s
+.PHONY : libft/ft_strlen.c.s
 
 main.o: main.c.o
 
@@ -203,7 +257,7 @@ main.o: main.c.o
 
 # target to build an object file
 main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FT_PRINTF.dir/build.make CMakeFiles/FT_PRINTF.dir/main.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf.c.dir/build.make CMakeFiles/ft_printf.c.dir/main.c.o
 .PHONY : main.c.o
 
 main.i: main.c.i
@@ -212,7 +266,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FT_PRINTF.dir/build.make CMakeFiles/FT_PRINTF.dir/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf.c.dir/build.make CMakeFiles/ft_printf.c.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -221,7 +275,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FT_PRINTF.dir/build.make CMakeFiles/FT_PRINTF.dir/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf.c.dir/build.make CMakeFiles/ft_printf.c.dir/main.c.s
 .PHONY : main.c.s
 
 # Help Target
@@ -232,13 +286,19 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... FT_PRINTF"
-	@echo "... ft_printf.o"
-	@echo "... ft_printf.i"
-	@echo "... ft_printf.s"
-	@echo "... libft/ft_itoa.o"
-	@echo "... libft/ft_itoa.i"
-	@echo "... libft/ft_itoa.s"
+	@echo "... ft_printf.c"
+	@echo "... ft_parse_format.o"
+	@echo "... ft_parse_format.i"
+	@echo "... ft_parse_format.s"
+	@echo "... libft/ft_putchar_fd.o"
+	@echo "... libft/ft_putchar_fd.i"
+	@echo "... libft/ft_putchar_fd.s"
+	@echo "... libft/ft_strdup.o"
+	@echo "... libft/ft_strdup.i"
+	@echo "... libft/ft_strdup.s"
+	@echo "... libft/ft_strlen.o"
+	@echo "... libft/ft_strlen.i"
+	@echo "... libft/ft_strlen.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

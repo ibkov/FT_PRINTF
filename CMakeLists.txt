@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.17)
-project(FT_PRINTF C)
+project(ft_printf C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(FT_PRINTF main.c ft_print.h ft_printf.c libft/ft_itoa.c)
+add_executable(ft_printf.c main.c ft_parse_format.c ft_printf.h libft/ft_putchar_fd.c libft/ft_strdup.c libft/ft_strlen.c)

@@ -139,7 +139,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=FT_PRINTF
+CMAKE_PROJECT_NAME:STATIC=ft_printf
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib
@@ -211,6 +211,12 @@ FT_PRINTF_SOURCE_DIR:STATIC=/Users/burswyck/Desktop/FT_PRINTF
 
 //Path to a program.
 ProcessorCount_cmd_sysctl:FILEPATH=/usr/sbin/sysctl
+
+//Value Computed by CMake
+ft_printf_BINARY_DIR:STATIC=/Users/burswyck/Desktop/FT_PRINTF/cmake-build-debug
+
+//Value Computed by CMake
+ft_printf_SOURCE_DIR:STATIC=/Users/burswyck/Desktop/FT_PRINTF
 
 
 ########################

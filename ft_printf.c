@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_print.h"
+#include "ft_printf.h"
 #include <stdio.h>
 
 int ft_printf(const char *format, ...)
@@ -23,7 +23,12 @@ int ft_printf(const char *format, ...)
 	va_list arg_ptr;
 	va_start(arg_ptr, format);
 	ch_to_per = ft_find_precent((char*)format);
-	ft_parse_modif(++ch_to_per);
+	if (ch_to_per)
+		printf("\n%s", ft_parse_modif(ch_to_per));
+
+
+
+
 	// ch_to_per = (char*)format;
 	// while(ch_to_per)
 	// {

@@ -73,7 +73,7 @@ CMAKE_BINARY_DIR = /Users/burswyck/Desktop/FT_PRINTF/cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/FT_PRINTF.dir/all
+all: CMakeFiles/ft_printf.c.dir/all
 
 .PHONY : all
 
@@ -83,36 +83,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/FT_PRINTF.dir/clean
+clean: CMakeFiles/ft_printf.c.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/FT_PRINTF.dir
+# Target rules for target CMakeFiles/ft_printf.c.dir
 
 # All Build rule for target.
-CMakeFiles/FT_PRINTF.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FT_PRINTF.dir/build.make CMakeFiles/FT_PRINTF.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FT_PRINTF.dir/build.make CMakeFiles/FT_PRINTF.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/burswyck/Desktop/FT_PRINTF/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4 "Built target FT_PRINTF"
-.PHONY : CMakeFiles/FT_PRINTF.dir/all
+CMakeFiles/ft_printf.c.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf.c.dir/build.make CMakeFiles/ft_printf.c.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf.c.dir/build.make CMakeFiles/ft_printf.c.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/burswyck/Desktop/FT_PRINTF/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target ft_printf.c"
+.PHONY : CMakeFiles/ft_printf.c.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/FT_PRINTF.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/burswyck/Desktop/FT_PRINTF/cmake-build-debug/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/FT_PRINTF.dir/all
+CMakeFiles/ft_printf.c.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/burswyck/Desktop/FT_PRINTF/cmake-build-debug/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ft_printf.c.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/burswyck/Desktop/FT_PRINTF/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/FT_PRINTF.dir/rule
+.PHONY : CMakeFiles/ft_printf.c.dir/rule
 
 # Convenience name for target.
-FT_PRINTF: CMakeFiles/FT_PRINTF.dir/rule
+ft_printf.c: CMakeFiles/ft_printf.c.dir/rule
 
-.PHONY : FT_PRINTF
+.PHONY : ft_printf.c
 
 # clean rule for target.
-CMakeFiles/FT_PRINTF.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FT_PRINTF.dir/build.make CMakeFiles/FT_PRINTF.dir/clean
-.PHONY : CMakeFiles/FT_PRINTF.dir/clean
+CMakeFiles/ft_printf.c.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf.c.dir/build.make CMakeFiles/ft_printf.c.dir/clean
+.PHONY : CMakeFiles/ft_printf.c.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

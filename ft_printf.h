@@ -28,7 +28,8 @@ typedef	struct		s_flags
 
 int ft_printf(const char *format, ...);
 char *ft_find_precent(char *str);
-char ft_parse_modif(char *modif);
+char *ft_parse_modif(char *modif);
+
 
 
 #endif

@@ -1,4 +1,4 @@
-#include "ft_print.h"
+#include "ft_printf.h"
 
 char *ft_find_precent(char *str)
 {
@@ -12,25 +12,21 @@ char *ft_find_precent(char *str)
     return (NULL);
 }
 
-char ft_parse_modif(char *modif)
+char *ft_parse_modif(char *modif)
 {
     char    *temp;
-    char    *begin;
+    int     i;
     char    *end;
     int     len_modif;
 
-    if (modif)
-    {
-        temp = modif;
-        if (end = ft_strchr(modif, 's'))
-        {
-            end = '\0';
-        }
-        printf("%s",  modif);
-        len_modif = ft_strlen(modif);
-        printf("%d", len_modif);
-    }
-    return 0;
+    i = 0;
+	while (modif[i] != 's' || modif[i] != '\0')
+		i++;
+	modif[i] = '\0';
+	if (modif[i] == '\0')
+		return (0);
+	else
+		return (modif);
 }
 
 

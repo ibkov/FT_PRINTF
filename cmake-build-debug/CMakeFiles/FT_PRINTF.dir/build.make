@@ -69,80 +69,50 @@ CMAKE_SOURCE_DIR = /Users/burswyck/Desktop/FT_PRINTF
 CMAKE_BINARY_DIR = /Users/burswyck/Desktop/FT_PRINTF/cmake-build-debug
 
 # Include any dependencies generated for this target.
-include CMakeFiles/FT_PRINTF.dir/depend.make
+include CMakeFiles/ft_printf.dir/depend.make
 
 # Include the progress variables for this target.
-include CMakeFiles/FT_PRINTF.dir/progress.make
+include CMakeFiles/ft_printf.dir/progress.make
 
 # Include the compile flags for this target's objects.
-include CMakeFiles/FT_PRINTF.dir/flags.make
+include CMakeFiles/ft_printf.dir/flags.make
 
-CMakeFiles/FT_PRINTF.dir/main.c.o: CMakeFiles/FT_PRINTF.dir/flags.make
-CMakeFiles/FT_PRINTF.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/burswyck/Desktop/FT_PRINTF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/FT_PRINTF.dir/main.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/FT_PRINTF.dir/main.c.o   -c /Users/burswyck/Desktop/FT_PRINTF/main.c
+CMakeFiles/ft_printf.dir/main.c.o: CMakeFiles/ft_printf.dir/flags.make
+CMakeFiles/ft_printf.dir/main.c.o: ../main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/burswyck/Desktop/FT_PRINTF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/ft_printf.dir/main.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/main.c.o   -c /Users/burswyck/Desktop/FT_PRINTF/main.c
 
-CMakeFiles/FT_PRINTF.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/FT_PRINTF.dir/main.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/burswyck/Desktop/FT_PRINTF/main.c > CMakeFiles/FT_PRINTF.dir/main.c.i
+CMakeFiles/ft_printf.dir/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/main.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/burswyck/Desktop/FT_PRINTF/main.c > CMakeFiles/ft_printf.dir/main.c.i
 
-CMakeFiles/FT_PRINTF.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/FT_PRINTF.dir/main.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/burswyck/Desktop/FT_PRINTF/main.c -o CMakeFiles/FT_PRINTF.dir/main.c.s
+CMakeFiles/ft_printf.dir/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/main.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/burswyck/Desktop/FT_PRINTF/main.c -o CMakeFiles/ft_printf.dir/main.c.s
 
-CMakeFiles/FT_PRINTF.dir/ft_printf.c.o: CMakeFiles/FT_PRINTF.dir/flags.make
-CMakeFiles/FT_PRINTF.dir/ft_printf.c.o: ../ft_printf.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/burswyck/Desktop/FT_PRINTF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/FT_PRINTF.dir/ft_printf.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/FT_PRINTF.dir/ft_printf.c.o   -c /Users/burswyck/Desktop/FT_PRINTF/ft_printf.c
+# Object files for target ft_printf
+ft_printf_OBJECTS = \
+"CMakeFiles/ft_printf.dir/main.c.o"
 
-CMakeFiles/FT_PRINTF.dir/ft_printf.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/FT_PRINTF.dir/ft_printf.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/burswyck/Desktop/FT_PRINTF/ft_printf.c > CMakeFiles/FT_PRINTF.dir/ft_printf.c.i
+# External object files for target ft_printf
+ft_printf_EXTERNAL_OBJECTS =
 
-CMakeFiles/FT_PRINTF.dir/ft_printf.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/FT_PRINTF.dir/ft_printf.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/burswyck/Desktop/FT_PRINTF/ft_printf.c -o CMakeFiles/FT_PRINTF.dir/ft_printf.c.s
-
-CMakeFiles/FT_PRINTF.dir/libft/ft_itoa.c.o: CMakeFiles/FT_PRINTF.dir/flags.make
-CMakeFiles/FT_PRINTF.dir/libft/ft_itoa.c.o: ../libft/ft_itoa.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/burswyck/Desktop/FT_PRINTF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/FT_PRINTF.dir/libft/ft_itoa.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/FT_PRINTF.dir/libft/ft_itoa.c.o   -c /Users/burswyck/Desktop/FT_PRINTF/libft/ft_itoa.c
-
-CMakeFiles/FT_PRINTF.dir/libft/ft_itoa.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/FT_PRINTF.dir/libft/ft_itoa.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/burswyck/Desktop/FT_PRINTF/libft/ft_itoa.c > CMakeFiles/FT_PRINTF.dir/libft/ft_itoa.c.i
-
-CMakeFiles/FT_PRINTF.dir/libft/ft_itoa.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/FT_PRINTF.dir/libft/ft_itoa.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/burswyck/Desktop/FT_PRINTF/libft/ft_itoa.c -o CMakeFiles/FT_PRINTF.dir/libft/ft_itoa.c.s
-
-# Object files for target FT_PRINTF
-FT_PRINTF_OBJECTS = \
-"CMakeFiles/FT_PRINTF.dir/main.c.o" \
-"CMakeFiles/FT_PRINTF.dir/ft_printf.c.o" \
-"CMakeFiles/FT_PRINTF.dir/libft/ft_itoa.c.o"
-
-# External object files for target FT_PRINTF
-FT_PRINTF_EXTERNAL_OBJECTS =
-
-FT_PRINTF: CMakeFiles/FT_PRINTF.dir/main.c.o
-FT_PRINTF: CMakeFiles/FT_PRINTF.dir/ft_printf.c.o
-FT_PRINTF: CMakeFiles/FT_PRINTF.dir/libft/ft_itoa.c.o
-FT_PRINTF: CMakeFiles/FT_PRINTF.dir/build.make
-FT_PRINTF: CMakeFiles/FT_PRINTF.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/burswyck/Desktop/FT_PRINTF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable FT_PRINTF"
-	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/FT_PRINTF.dir/link.txt --verbose=$(VERBOSE)
+ft_printf: CMakeFiles/ft_printf.dir/main.c.o
+ft_printf: CMakeFiles/ft_printf.dir/build.make
+ft_printf: CMakeFiles/ft_printf.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/burswyck/Desktop/FT_PRINTF/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable ft_printf"
+	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ft_printf.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/FT_PRINTF.dir/build: FT_PRINTF
+CMakeFiles/ft_printf.dir/build: ft_printf
 
-.PHONY : CMakeFiles/FT_PRINTF.dir/build
+.PHONY : CMakeFiles/ft_printf.dir/build
 
-CMakeFiles/FT_PRINTF.dir/clean:
-	$(CMAKE_COMMAND) -P CMakeFiles/FT_PRINTF.dir/cmake_clean.cmake
-.PHONY : CMakeFiles/FT_PRINTF.dir/clean
+CMakeFiles/ft_printf.dir/clean:
+	$(CMAKE_COMMAND) -P CMakeFiles/ft_printf.dir/cmake_clean.cmake
+.PHONY : CMakeFiles/ft_printf.dir/clean
 
-CMakeFiles/FT_PRINTF.dir/depend:
-	cd /Users/burswyck/Desktop/FT_PRINTF/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/burswyck/Desktop/FT_PRINTF /Users/burswyck/Desktop/FT_PRINTF /Users/burswyck/Desktop/FT_PRINTF/cmake-build-debug /Users/burswyck/Desktop/FT_PRINTF/cmake-build-debug /Users/burswyck/Desktop/FT_PRINTF/cmake-build-debug/CMakeFiles/FT_PRINTF.dir/DependInfo.cmake --color=$(COLOR)
-.PHONY : CMakeFiles/FT_PRINTF.dir/depend
+CMakeFiles/ft_printf.dir/depend:
+	cd /Users/burswyck/Desktop/FT_PRINTF/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/burswyck/Desktop/FT_PRINTF /Users/burswyck/Desktop/FT_PRINTF /Users/burswyck/Desktop/FT_PRINTF/cmake-build-debug /Users/burswyck/Desktop/FT_PRINTF/cmake-build-debug /Users/burswyck/Desktop/FT_PRINTF/cmake-build-debug/CMakeFiles/ft_printf.dir/DependInfo.cmake --color=$(COLOR)
+.PHONY : CMakeFiles/ft_printf.dir/depend
 

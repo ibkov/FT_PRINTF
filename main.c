@@ -1,9 +1,7 @@
 #include <stdio.h>
-#include "ft_print.h"
+#include "ft_printf.h"
 
 int main() {
-	ft_printf("Привет %1234s jhkfdjshkjfhkjsd", "Игорь");
-	// printf("Привет %s", "123", "123");
-	// printf("asdas %.s shfdkjsd", "222");
+	ft_printf("Hello, World!hjhjksad%-0.5s ");
 	return 0;
 }
