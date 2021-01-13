@@ -1,15 +1,16 @@
 #include "ft_printf.h"
 
-char *ft_find_precent(char *str)
+int searchBeginSpecificator(const char *str)
 {
-    while (*str != '%' && *str)
+	int i;
+
+	i = 0;
+	while (str[i] != '%' && str[i])
 	{
-		ft_putchar_fd(*str, 1);
-		str++;
+		ft_putchar_fd(str[i], 1);
+		i++;
 	}
-    if (*str == '%')
-        return (str);
-    return (NULL);
+	return (i);
 }
 
 char *ft_parse_modif(char *modif)
@@ -28,5 +29,16 @@ char *ft_parse_modif(char *modif)
 	else
 		return (modif);
 }
+
+//int searchBeginSpecificator(va_list arg_ptr, char format)
+//{
+//	int     i;
+//
+//	if (format == '%')
+//		i = 0;
+//	else
+//		ft_putchar_fd(format, 1);
+//	return i;
+//}
 
 

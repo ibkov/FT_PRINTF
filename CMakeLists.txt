@@ -3,4 +3,4 @@ project(ft_printf C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(ft_printf.c main.c ft_parse_format.c ft_printf.h libft/ft_putchar_fd.c libft/ft_strdup.c libft/ft_strlen.c)
+add_executable(ft_printf.c main.c ft_parse_format.c ft_printf.h libft/ft_putchar_fd.c libft/ft_strdup.c libft/ft_strlen.c libft/ft_putchar_fd.c)

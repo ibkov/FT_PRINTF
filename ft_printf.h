@@ -19,7 +19,7 @@
 
 typedef	struct		s_flags
 {
-	int				flags;
+	int				minus;
     int				width;
     int				precision;
 	int				type;
@@ -27,6 +27,7 @@ typedef	struct		s_flags
 }					t_flags;
 
 int ft_printf(const char *format, ...);
+int searchBeginSpecificator(const char *format);
 char *ft_find_precent(char *str);
 char *ft_parse_modif(char *modif);
 

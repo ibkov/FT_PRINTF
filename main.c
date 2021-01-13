@@ -2,6 +2,6 @@
 #include "ft_printf.h"
 
 int main() {
-	ft_printf("Hello, World!hjhjksad%-0.5s ");
+	ft_printf("abc%-sk   %s", "ooo", "yyuii");
 	return 0;
 }
