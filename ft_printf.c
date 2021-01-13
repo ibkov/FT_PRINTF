@@ -20,7 +20,6 @@ int print_args(va_list arg_ptr, t_flags list_flags)
 	if (list_flags.type == 1)
 	{
 		arg = va_arg(arg_ptr, char*);
-
 		ft_putstr_fd(arg, 1);
 	}
 	return (0);
