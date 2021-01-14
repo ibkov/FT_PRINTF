@@ -13,13 +13,33 @@
 #include "ft_printf.h"
 #include <stdio.h>
 
+
+
 int print_args(va_list arg_ptr, t_flags list_flags)
 {
 	char* arg;
+	int len;
+
+	len = 0;
 	if (list_flags.type == 1)
 	{
 		arg = va_arg(arg_ptr, char*);
-		ft_putstr_fd(arg, 1);
+		if (list_flags.width != 0 && !list_flags.minus)
+		{
+			len = ft_strlen(arg);
+			while (list_flags.width > len++)
+				ft_putchar_fd(' ', 1);
+			ft_putstr_fd(arg, 1);
+		}
+		else if (list_flags.width != 0 && list_flags.minus)
+		{
+			ft_putstr_fd(arg, 1);
+			len = ft_strlen(arg);
+			while (list_flags.width > len++)
+				ft_putchar_fd(' ', 1);
+		}
+		if ()ft_putstr_fd(arg, 1);
+
 	}
 	return (0);
 }
