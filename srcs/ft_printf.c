@@ -38,7 +38,8 @@ int print_args(va_list arg_ptr, t_flags list_flags)
 			while (list_flags.width > len++)
 				ft_putchar_fd(' ', 1);
 		}
-		if ()ft_putstr_fd(arg, 1);
+		else
+			ft_putstr_fd(arg, 1);
 
 	}
 	return (0);
@@ -48,7 +49,7 @@ void init_flags(t_flags *list_flags)
 {
 	list_flags->minus = 0;
 	list_flags->lenght = 0;
-	list_flags->precision = 0;
+	list_flags->precision = -1;
 	list_flags->type = 0;
 	list_flags->width = 0;
 }
@@ -72,9 +73,17 @@ void analysisFlags(const char* format, int *i, t_flags *list_flags)
 	{
 		if (format[*i] == '-')
 			list_flags->minus = 1;
-		if (ft_isdigit(format[*i])) {
+		if (ft_isdigit(format[*i]) && list_flags->precision == -1)
+		{
 			list_flags->width = ft_atoi(&format[*i]);
 			*i += countInNum(list_flags->width) - 1;
+		}
+		if (format[*i] == '.')
+			list_flags->precision = 0;
+		if (ft_isdigit(format[*i]) && list_flags->precision != -1)
+		{
+			list_flags->precision = ft_atoi(&format[*i]);
+			*i += countInNum(list_flags->precision) - 1;
 		}
 		(*i)++;
 	}
