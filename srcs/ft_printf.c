@@ -13,38 +13,6 @@
 #include "ft_printf.h"
 #include <stdio.h>
 
-
-
-int print_args(va_list arg_ptr, t_flags list_flags)
-{
-	char* arg;
-	int len;
-
-	len = 0;
-	if (list_flags.type == 1)
-	{
-		arg = va_arg(arg_ptr, char*);
-		if (list_flags.width != 0 && !list_flags.minus)
-		{
-			len = ft_strlen(arg);
-			while (list_flags.width > len++)
-				ft_putchar_fd(' ', 1);
-			ft_putstr_fd(arg, 1);
-		}
-		else if (list_flags.width != 0 && list_flags.minus)
-		{
-			ft_putstr_fd(arg, 1);
-			len = ft_strlen(arg);
-			while (list_flags.width > len++)
-				ft_putchar_fd(' ', 1);
-		}
-		else
-			ft_putstr_fd(arg, 1);
-
-	}
-	return (0);
-}
-
 void init_flags(t_flags *list_flags)
 {
 	list_flags->minus = 0;
@@ -78,8 +46,9 @@ void analysisFlags(const char* format, int *i, t_flags *list_flags)
 			list_flags->width = ft_atoi(&format[*i]);
 			*i += countInNum(list_flags->width) - 1;
 		}
-		if (format[*i] == '.')
+		if (format[*i] == '.') {
 			list_flags->precision = 0;
+		}
 		if (ft_isdigit(format[*i]) && list_flags->precision != -1)
 		{
 			list_flags->precision = ft_atoi(&format[*i]);
@@ -110,7 +79,7 @@ int ft_printf(const char *format, ...)
 			init_flags(&list_flags);
 			i++;
 			analysisFlags(format, &i, &list_flags);
-			print_args(arg_ptr, list_flags);
+			ft_printString(arg_ptr, list_flags);
 		}
 //		searchBeginSpecificator(format);
 //		if (format[i])

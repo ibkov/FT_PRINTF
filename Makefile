@@ -11,7 +11,8 @@ DIR_L = srcs/
 INCLUDES = -I includes/ -I libft/
 
 LIST = 		ft_printf.c \
-			ft_parse_format.c \
+			ft_printString.c
+
 
 OBJS =$(SRCS:.c=.o)
 
@@ -20,29 +21,29 @@ SRCS = $(addprefix $(DIR_L), $(LIST))
 all: $(NAME)
 
 $(NAME): my_lib $(OBJS)
-	@cp libft/libft.a ./$(NAME)
-	@ar rc $(NAME) $(OBJS)
-	@ranlib $(NAME)
+	cp libft/libft.a ./$(NAME)
+	ar rc $(NAME) $(OBJS)
+	ranlib $(NAME)
 
 my_lib: 
-	@make -C $(LIBFT)
+	make -C $(LIBFT)
 
 %.o: %.c includes/ft_printf.h
-	@gcc -g $(FLAGS) $(INCLUDES) -c $< -o $@
+	gcc -g $(FLAGS) $(INCLUDES) -c $< -o $@
 
 test: $(NAME)
-	@gcc -g $(INCLUDES) srcs/main.c -lftprintf -L. -o $(TEST)
+	gcc -g $(INCLUDES) srcs/main.c -lftprintf -L. -o $(TEST)
 
 clean:
-	@rm -f $(OBJS)
-	@make clean -C $(LIBFT)
+	rm -f $(OBJS)
+	make clean -C $(LIBFT)
 
 fclean: clean
-	@rm -f $(NAME)
-	@make fclean -C $(LIBFT)
+	rm -f $(NAME)
+	make fclean -C $(LIBFT)
 
 tclean:
-	@rm $(TEST)
+	rm $(TEST)
 
 re: fclean all
 

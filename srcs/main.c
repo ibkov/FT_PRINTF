@@ -2,7 +2,7 @@
 #include "ft_printf.h"
 
 int main() {
-//	printf("abc%10.sk   %s %s\n", "ooo", "yyuii", "234");
-	ft_printf("abc%sk   %s %s", "ooo", "yyuii", "234");
+//	printf("abc%-1.10s\n %.1s", "123", "12");
+	ft_printf("abc%-10.10s %.s", "123", "12");
 	return 0;
 }
