@@ -16,7 +16,7 @@
 int print_args(va_list arg_ptr, t_flags list_flags)
 {
 	char* arg;
-
+	printf("%d", list_flags.width);
 	if (list_flags.type == 1)
 	{
 		arg = va_arg(arg_ptr, char*);
@@ -40,6 +40,8 @@ void analysisFlags(const char* format, int *i, t_flags *list_flags)
 	{
 		if (format[*i] == '-')
 			list_flags->minus = 1;
+		else if (ft_isdigit(format[*i]))
+			list_flags->width = (list_flags->width * 10) + (format[*i] - 48);
 		(*i)++;
 	}
 	if (format[*i] == 's')

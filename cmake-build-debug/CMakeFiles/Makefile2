@@ -64,16 +64,16 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/burswyck/Desktop/ft_printf
+CMAKE_SOURCE_DIR = /Users/igorkovalenko/CLionProjects/FT_PRINTF_MY
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/burswyck/Desktop/ft_printf/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/igorkovalenko/CLionProjects/FT_PRINTF_MY/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/ft_printf.c.dir/all
+all: CMakeFiles/main.c.dir/all
 
 .PHONY : all
 
@@ -83,36 +83,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/ft_printf.c.dir/clean
+clean: CMakeFiles/main.c.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/ft_printf.c.dir
+# Target rules for target CMakeFiles/main.c.dir
 
 # All Build rule for target.
-CMakeFiles/ft_printf.c.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf.c.dir/build.make CMakeFiles/ft_printf.c.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf.c.dir/build.make CMakeFiles/ft_printf.c.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/burswyck/Desktop/ft_printf/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target ft_printf.c"
-.PHONY : CMakeFiles/ft_printf.c.dir/all
+CMakeFiles/main.c.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/igorkovalenko/CLionProjects/FT_PRINTF_MY/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target main.c"
+.PHONY : CMakeFiles/main.c.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/ft_printf.c.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/burswyck/Desktop/ft_printf/cmake-build-debug/CMakeFiles 6
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ft_printf.c.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/burswyck/Desktop/ft_printf/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/ft_printf.c.dir/rule
+CMakeFiles/main.c.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/igorkovalenko/CLionProjects/FT_PRINTF_MY/cmake-build-debug/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/main.c.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/igorkovalenko/CLionProjects/FT_PRINTF_MY/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/main.c.dir/rule
 
 # Convenience name for target.
-ft_printf.c: CMakeFiles/ft_printf.c.dir/rule
+main.c: CMakeFiles/main.c.dir/rule
 
-.PHONY : ft_printf.c
+.PHONY : main.c
 
 # clean rule for target.
-CMakeFiles/ft_printf.c.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf.c.dir/build.make CMakeFiles/ft_printf.c.dir/clean
-.PHONY : CMakeFiles/ft_printf.c.dir/clean
+CMakeFiles/main.c.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.c.dir/build.make CMakeFiles/main.c.dir/clean
+.PHONY : CMakeFiles/main.c.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
