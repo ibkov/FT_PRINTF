@@ -1,6 +1,6 @@
 #include "ft_printf.h"
 
-int ft_printChar(va_list arg_ptr, t_flags list_flags)
+int ft_printString(va_list arg_ptr, t_flags list_flags)
 {
     int arg;
     int len;

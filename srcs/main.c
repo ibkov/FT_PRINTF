@@ -2,7 +2,7 @@
 #include "ft_printf.h"
 
 int main() {
-	// printf("%.03s", NULL);
-	ft_printf("%c", '4');
+	// printf("%%");
+	ft_printf("%%");
 	return 0;
 }

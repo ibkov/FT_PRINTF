@@ -35,5 +35,6 @@ int countInNum(int num);
 void analysisFlags(const char* format, int *i, t_flags *list_flags, va_list arg_ptr);
 void printValue(va_list arg_ptr, t_flags list_flags, const char* format, int *i);
 int ft_printChar(va_list arg_ptr, t_flags list_flags);
+int ft_printString(va_list arg_ptr, t_flags list_flags);
 
 #endif
