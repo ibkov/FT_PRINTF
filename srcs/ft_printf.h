@@ -22,11 +22,14 @@ typedef	struct		s_flags
 	int				minus;
     int				width;
     int				precision;
-	int				type;
-	int				lenght;
+	int				zero;
 }					t_flags;
 
 int ft_printf(const char *format, ...);
 int ft_printString(va_list arg_ptr, t_flags list_flags);
+void init_flags(t_flags *list_flags);
+int countInNum(int num);
+void analysisFlags(const char* format, int *i, t_flags *list_flags, va_list arg_ptr);
+void printValue(va_list arg_ptr, t_flags list_flags, const char* format, int *i);
 
 #endif

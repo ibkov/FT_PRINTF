@@ -11,7 +11,9 @@ DIR_L = srcs/
 INCLUDES = -I includes/ -I libft/
 
 LIST = 		ft_printf.c \
-			ft_printString.c
+			ft_printString.c \
+			ft_analysisFlags.c\
+			ft_printValue.c
 
 
 OBJS =$(SRCS:.c=.o)
