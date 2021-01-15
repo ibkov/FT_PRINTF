@@ -7,7 +7,8 @@ int ft_printString(va_list arg_ptr, t_flags list_flags)
 	int len;
 
 	len = 0;
-	arg = ft_strdup(va_arg(arg_ptr, char*));
+	if (!(arg = ft_strdup(va_arg(arg_ptr, char*))))
+		arg = ft_strdup("(null)");
 	if (list_flags.precision < (int)ft_strlen(arg) && list_flags.precision != -1)
 		arg[list_flags.precision] = '\0';
 	len = ft_strlen(arg);

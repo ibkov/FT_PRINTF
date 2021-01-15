@@ -3,10 +3,10 @@
 void    init_flags(t_flags *list_flags)
 {
 	list_flags->minus = 0;
-	list_flags->lenght = 0;
 	list_flags->precision = -1;
-	list_flags->type = 0;
+	list_flags->zero = 0;
 	list_flags->width = 0;
+
 }
 
 int		checkFlag(char flag)
@@ -46,7 +46,7 @@ void    analysisFlags(const char* format, int *i, t_flags *list_flags, va_list a
 		if (ft_isdigit(format[*i]) && list_flags->precision == -1)
 		{
 			list_flags->width = ft_atoi(&format[*i]);
-			*i += countInNum(list_flags->width);
+			*i += countInNum(list_flags->width) -1;
 		}
 		if (format[*i] == '.') {
 			list_flags->precision = 0;

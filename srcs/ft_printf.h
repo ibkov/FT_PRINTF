@@ -14,6 +14,9 @@
 # define FT_PRINT_H
 
 # include <stdarg.h>
+
+#include <stdio.h>//del
+
 # include "../libft/libft.h"
 
 
@@ -31,5 +34,6 @@ void init_flags(t_flags *list_flags);
 int countInNum(int num);
 void analysisFlags(const char* format, int *i, t_flags *list_flags, va_list arg_ptr);
 void printValue(va_list arg_ptr, t_flags list_flags, const char* format, int *i);
+int ft_printChar(va_list arg_ptr, t_flags list_flags);
 
 #endif

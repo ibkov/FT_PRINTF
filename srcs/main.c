@@ -2,7 +2,7 @@
 #include "ft_printf.h"
 
 int main() {
-	printf("%*.*s\n", 100, 3, "23456");
-	ft_printf("%*.*s\n", 100, 3, "23456");
+	// printf("%.03s", NULL);
+	ft_printf("%c", '4');
 	return 0;
 }
