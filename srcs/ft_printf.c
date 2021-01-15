@@ -25,7 +25,8 @@ void init_flags(t_flags *list_flags)
 int countInNum(int num)
 {
 	int     i;
-
+	if (!num)
+		return (1);
 	i = 0;
 	while (num > 0)
 	{
@@ -44,7 +45,7 @@ void analysisFlags(const char* format, int *i, t_flags *list_flags)
 		if (ft_isdigit(format[*i]) && list_flags->precision == -1)
 		{
 			list_flags->width = ft_atoi(&format[*i]);
-			*i += countInNum(list_flags->width) - 1;
+			*i += countInNum(list_flags->width);
 		}
 		if (format[*i] == '.') {
 			list_flags->precision = 0;

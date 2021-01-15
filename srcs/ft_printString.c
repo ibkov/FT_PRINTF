@@ -9,12 +9,9 @@ int ft_printString(va_list arg_ptr, t_flags list_flags)
 	len = 0;
 	if (list_flags.type == 1)
 	{
-		arg = va_arg(arg_ptr, char*);
+		arg = ft_strdup(va_arg(arg_ptr, char*));
 		if (list_flags.precision < (int)ft_strlen(arg) && list_flags.precision != -1)
-		{
-			printf("pres = %d \n len = %d\n", list_flags.precision, (int)ft_strlen(arg));
-//			arg[list_flags.precision] = '\0';
-		}
+			arg[list_flags.precision] = '\0';
 		len = ft_strlen(arg);
 		if (list_flags.width != 0 && !list_flags.minus)
 		{
