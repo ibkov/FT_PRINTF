@@ -28,15 +28,16 @@ typedef	struct		s_flags
 	int				zero;
 }					t_flags;
 
-int ft_printf(const char *format, ...);
-int ft_printString(va_list arg_ptr, t_flags list_flags);
-void init_flags(t_flags *list_flags);
-int countInNum(int num);
-void analysisFlags(const char* format, int *i, t_flags *list_flags, va_list arg_ptr);
-void printValue(va_list arg_ptr, t_flags list_flags, const char* format, int *i, int *count);
-int ft_printChar(va_list arg_ptr, t_flags list_flags);
-int ft_printString(va_list arg_ptr, t_flags list_flags);
-int ft_printPrecent(t_flags list_flags);
-int ft_printInteger(va_list arg_ptr, t_flags list_flags);
+int     ft_printf(const char *format, ...);
+int     ft_printString(va_list arg_ptr, t_flags list_flags, int *count);
+void    init_flags(t_flags *list_flags);
+void    analysisFlags(const char* format, int *i, t_flags *list_flags, va_list arg_ptr);
+void    printValue(va_list arg_ptr, t_flags list_flags, const char* format, int *i, int *count);
+int     ft_printChar(va_list arg_ptr, t_flags list_flags);
+int     ft_printPrecent(t_flags list_flags);
+int     ft_printInteger(va_list arg_ptr, t_flags list_flags);
+int	    addForwardChar(char c, int width);
+int     ft_printUnsignedInteger(va_list arg_ptr, t_flags list_flags);
+int     ft_printPointer(va_list arg_ptr, t_flags list_flags);
 
 #endif

@@ -9,17 +9,18 @@ void    init_flags(t_flags *list_flags)
 
 }
 
-int		checkFlag(char flag)
+int		isFlagChar(char flagChar)
 {
-	return (flag == '-' || ft_isdigit(flag) || flag == '.' || flag == '*');
+	return (flagChar == '-' || ft_isdigit(flagChar) || flagChar == '.' || flagChar == '*');
 }
 
 int     countInNum(int num)
 {
-	int     i;
+	int i;
+
+	i = 0;
 	if (!num)
 		return (1);
-	i = 0;
 	while (num > 0)
 	{
 		num /= 10;
@@ -39,13 +40,13 @@ void    processingAsterisk(t_flags *list_flags, va_list arg_ptr)
 
 void    analysisFlags(const char* format, int *i, t_flags *list_flags, va_list arg_ptr)
 {
-	while (format[*i] && checkFlag(format[*i]))
+	while (format[*i] && isFlagChar(format[*i]))
 	{
 		if (format[*i] == '-')
 			list_flags->minus = 1;
 		if (format[*i] == '0' && list_flags->width == 0)
 			list_flags->zero = 1;
-		if (ft_isdigit(format[*i]) && list_flags->precision == -1)
+		if (ft_isdigit(format[*i]) && list_flags->precision == -1 && format[*i] != '0')
 		{
 			list_flags->width = ft_atoi(&format[*i]);
 			*i += countInNum(list_flags->width) - 1;

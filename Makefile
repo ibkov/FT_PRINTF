@@ -16,7 +16,9 @@ LIST = 		ft_printf.c \
 			ft_printValue.c \
 			ft_printChar.c \
 			ft_printPrecent.c \
-			ft_printInteger.c
+			ft_printInteger.c \
+			ft_printUnsingedInt.c \
+			ft_printPointer.c
 
 
 OBJS =$(SRCS:.c=.o)
