@@ -25,15 +25,18 @@ int ft_printf(const char *format, ...)
 	while (format[i] != '\0')
 	{
 		if (format[i] != '%')
+		{
 			ft_putchar_fd(format[i], 1);
+			count++;
+		}
 		else
 		{
 			init_flags(&list_flags);
 			i++;
 			analysisFlags(format, &i, &list_flags, arg_ptr);
-			printValue(arg_ptr, list_flags, format, &i);
+			printValue(arg_ptr, list_flags, format, &i, &count);
 		}
 		i++;
 	}
-	return (0);
+	return (count);
 }

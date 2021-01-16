@@ -43,10 +43,12 @@ void    analysisFlags(const char* format, int *i, t_flags *list_flags, va_list a
 	{
 		if (format[*i] == '-')
 			list_flags->minus = 1;
+		if (format[*i] == '0' && list_flags->width == 0)
+			list_flags->zero = 1;
 		if (ft_isdigit(format[*i]) && list_flags->precision == -1)
 		{
 			list_flags->width = ft_atoi(&format[*i]);
-			*i += countInNum(list_flags->width) -1;
+			*i += countInNum(list_flags->width) - 1;
 		}
 		if (format[*i] == '.') {
 			list_flags->precision = 0;
