@@ -8,7 +8,7 @@ int ft_abs(int num)
 	return (num);
 }
 
-void	 ft_printString(va_list arg_ptr, t_flags list_flags, int *count)
+void	 ft_print_string(va_list arg_ptr, t_flags list_flags, int *count)
 {
 	char* arg;
 	int len;
@@ -20,13 +20,13 @@ void	 ft_printString(va_list arg_ptr, t_flags list_flags, int *count)
 	len = ft_strlen(arg);
 	if (list_flags.width != 0 && !list_flags.minus && list_flags.width > 0)
 	{
-		*count += addForwardChar(' ', list_flags.width - len);
+		*count += add_forward_char(' ', list_flags.width - len);
 		*count += ft_putstr_fd(arg, 1);
 	}
 	else if ((list_flags.width != 0 && list_flags.minus) || list_flags.width < 0)
 	{
 		*count += ft_putstr_fd(arg, 1);
-		*count += addForwardChar(' ', ft_abs(list_flags.width) - len);
+		*count += add_forward_char(' ', ft_abs(list_flags.width) - len);
 	}
 	else
 		*count += ft_putstr_fd(arg, 1);

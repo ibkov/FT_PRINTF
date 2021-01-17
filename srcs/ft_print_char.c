@@ -1,13 +1,13 @@
 #include "ft_printf.h"
 
-void ft_printChar(va_list arg_ptr, t_flags list_flags, int *count)
+void ft_print_char(va_list arg_ptr, t_flags list_flags, int *count)
 {
     int arg;
 
     arg = va_arg(arg_ptr, int);
     if (list_flags.width != 0 && !list_flags.minus && list_flags.width > 0)
 	{
-		*count += addForwardChar(' ', ft_abs(list_flags.width) - 1);
+		*count += add_forward_char(' ', ft_abs(list_flags.width) - 1);
 		ft_putchar_fd(arg, 1);
         *count += 1;
 	}
@@ -15,7 +15,7 @@ void ft_printChar(va_list arg_ptr, t_flags list_flags, int *count)
 	{
 		ft_putchar_fd(arg, 1);
         *count += 1;
-		*count += addForwardChar(' ', ft_abs(list_flags.width) - 1);
+		*count += add_forward_char(' ', ft_abs(list_flags.width) - 1);
 	}
 	else
 	{

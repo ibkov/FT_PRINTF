@@ -1,6 +1,6 @@
 #include "ft_printf.h"
 
-int     countInNumHex(unsigned long long num, int len)
+int     count_in_num_hex(unsigned long long num, int len)
 {
 	int i;
 
@@ -20,7 +20,7 @@ char	*ft_convert_base(char *alf_hex, unsigned long long num)
     int     len;
 	
     len = ft_strlen(alf_hex);
-	count_num = countInNumHex(num, len);
+	count_num = count_in_num_hex(num, len);
 	if (!(str = (char *)malloc(sizeof(char) * (count_num + 1))))
 		return (NULL);
 	str[count_num] = '\0';
@@ -35,7 +35,7 @@ char	*ft_convert_base(char *alf_hex, unsigned long long num)
 
 }
 
-int checkMinusPointer(t_flags list_flags, int len, char *arg)
+int check_minus_pointer(t_flags list_flags, int len, char *arg)
 {
     int count;
 
@@ -44,11 +44,11 @@ int checkMinusPointer(t_flags list_flags, int len, char *arg)
     {
         count += ft_putstr_fd("0x", 1);
         count += ft_putstr_fd(arg, 1);
-        count += addForwardChar(' ', list_flags.width - (len + 2));
+        count += add_forward_char(' ', list_flags.width - (len + 2));
     }
     else if (!list_flags.minus)
     {
-        count += addForwardChar(' ', list_flags.width - (len + 2));
+        count += add_forward_char(' ', list_flags.width - (len + 2));
         count += ft_putstr_fd("0x", 1);
         count += ft_putstr_fd(arg, 1);
     }
@@ -56,7 +56,7 @@ int checkMinusPointer(t_flags list_flags, int len, char *arg)
 }
 
 
-int ft_printPointer(va_list arg_ptr, t_flags list_flags)
+int ft_print_pointer(va_list arg_ptr, t_flags list_flags)
 {
     char *arg;
     int count;
@@ -70,7 +70,7 @@ int ft_printPointer(va_list arg_ptr, t_flags list_flags)
     else
         arg = ft_convert_base("0123456789abcdef", num);
     len = ft_strlen(arg);
-    count += checkMinusPointer(list_flags, len, arg);
+    count += check_minus_pointer(list_flags, len, arg);
     free(arg);
     return (count);
 }

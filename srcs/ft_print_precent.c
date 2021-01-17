@@ -1,6 +1,6 @@
 #include "ft_printf.h"
 
-int ft_printPrecent(t_flags list_flags)
+int ft_print_precent(t_flags list_flags)
 {
     int len;
 	char chr;
@@ -13,13 +13,13 @@ int ft_printPrecent(t_flags list_flags)
 		chr = '0';
     if (list_flags.width != 0 && !list_flags.minus)
 	{
-		count += addForwardChar(chr, list_flags.width - len);
+		count += add_forward_char(chr, list_flags.width - len);
 		ft_putchar_fd('%', 1);
 	}
 	else if (list_flags.width != 0 && list_flags.minus)
 	{
 		ft_putchar_fd('%', 1);
-		count += addForwardChar(' ', list_flags.width - len);
+		count += add_forward_char(' ', list_flags.width - len);
 	}
 	else
 		ft_putchar_fd('%', 1);

@@ -1,6 +1,6 @@
 #include "ft_printf.h"
 
-int checkPrecisionHexadecimal(t_flags list_flags, int len)
+int check_precision_hexadecimal(t_flags list_flags, int len)
 {
     int i;
 
@@ -17,41 +17,41 @@ int checkPrecisionHexadecimal(t_flags list_flags, int len)
     return (0);
 }
 
-int checkWidthHexadecimal(t_flags list_flags, int len)
+int check_width_hexadecimal(t_flags list_flags, int len)
 {
     int count;
 
     count = 0;
     if (list_flags.zero && list_flags.precision < 0 && !list_flags.minus)
-        count += addForwardChar('0', list_flags.width - len);
+        count += add_forward_char('0', list_flags.width - len);
     else if (list_flags.precision >= len)
-        count += addForwardChar(' ', list_flags.width - list_flags.precision);
+        count += add_forward_char(' ', list_flags.width - list_flags.precision);
     else
-        count += addForwardChar(' ', list_flags.width - len);
+        count += add_forward_char(' ', list_flags.width - len);
     return (count);
 }
 
-int checkMinusHexadecimal(t_flags list_flags, int len, char *arg)
+int check_minus_hexadecimal(t_flags list_flags, int len, char *arg)
 {
     int count;
 
     count = 0;
     if (list_flags.minus)
     {
-        count += checkPrecisionHexadecimal(list_flags, len);
+        count += check_precision_hexadecimal(list_flags, len);
         count += ft_putstr_fd(arg, 1);
-        count += checkWidthHexadecimal(list_flags, len);
+        count += check_width_hexadecimal(list_flags, len);
     }
     else if (!list_flags.minus)
     {
-        count += checkWidthHexadecimal(list_flags, len);
-        count += checkPrecisionHexadecimal(list_flags, len);
+        count += check_width_hexadecimal(list_flags, len);
+        count += check_precision_hexadecimal(list_flags, len);
         count += ft_putstr_fd(arg, 1);
     }
     return (count);
 }
 
-int ft_printHexadecimal(va_list arg_ptr, t_flags list_flags, char *alf_hex)
+int ft_print_hexadecimal(va_list arg_ptr, t_flags list_flags, char *alf_hex)
 {
     char *arg;
     int count;
@@ -65,9 +65,9 @@ int ft_printHexadecimal(va_list arg_ptr, t_flags list_flags, char *alf_hex)
         arg = ft_convert_base(alf_hex, num);
     len = ft_strlen(arg);
     if (*arg == '0' && list_flags.precision == 0)
-        count += addForwardChar(' ', ft_abs(list_flags.width));
+        count += add_forward_char(' ', ft_abs(list_flags.width));
     else
-        count += checkMinusHexadecimal(list_flags, len, arg);
+        count += check_minus_hexadecimal(list_flags, len, arg);
     free(arg);
     return (count);
 }

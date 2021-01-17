@@ -9,12 +9,12 @@ void    init_flags(t_flags *list_flags)
 
 }
 
-int		isFlagChar(char flagChar)
+int		is_flag_char(char flagChar)
 {
 	return (flagChar == '-' || ft_isdigit(flagChar) || flagChar == '.' || flagChar == '*');
 }
 
-int     countInNum(int num)
+int     count_in_num(int num)
 {
 	int i;
 
@@ -29,7 +29,7 @@ int     countInNum(int num)
 	return (i);
 }
 
-void    processingAsterisk(t_flags *list_flags, va_list arg_ptr)
+void    processing_asterisk(t_flags *list_flags, va_list arg_ptr)
 {
 	if (!list_flags->precision)
 		list_flags->precision = va_arg(arg_ptr, int);
@@ -38,9 +38,9 @@ void    processingAsterisk(t_flags *list_flags, va_list arg_ptr)
 	
 }
 
-void    analysisFlags(const char* format, int *i, t_flags *list_flags, va_list arg_ptr)
+void    analysis_flags(const char* format, int *i, t_flags *list_flags, va_list arg_ptr)
 {
-	while (format[*i] && isFlagChar(format[*i]))
+	while (format[*i] && is_flag_char(format[*i]))
 	{
 		if (format[*i] == '-')
 			list_flags->minus = 1;
@@ -49,7 +49,7 @@ void    analysisFlags(const char* format, int *i, t_flags *list_flags, va_list a
 		if (ft_isdigit(format[*i]) && list_flags->precision == -1 && format[*i] != '0')
 		{
 			list_flags->width = ft_atoi(&format[*i]);
-			*i += countInNum(list_flags->width) - 1;
+			*i += count_in_num(list_flags->width) - 1;
 		}
 		if (format[*i] == '.') {
 			list_flags->precision = 0;
@@ -57,10 +57,10 @@ void    analysisFlags(const char* format, int *i, t_flags *list_flags, va_list a
 		if (ft_isdigit(format[*i]) && list_flags->precision != -1)
 		{
 			list_flags->precision = ft_atoi(&format[*i]);
-			*i += countInNum(list_flags->precision) - 1;
+			*i += count_in_num(list_flags->precision) - 1;
 		}
 		if (format[*i] == '*')
-			processingAsterisk(list_flags, arg_ptr);
+			processing_asterisk(list_flags, arg_ptr);
 		(*i)++;
 	}
 }
