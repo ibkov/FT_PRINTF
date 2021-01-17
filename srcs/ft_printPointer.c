@@ -42,17 +42,15 @@ int checkMinusPointer(t_flags list_flags, int len, char *arg)
     count = 0;
     if (list_flags.minus)
     {
-        ft_putstr_fd("0x", 1);
-        ft_putstr_fd(arg, 1);
-        count = len + 2;
+        count += ft_putstr_fd("0x", 1);
+        count += ft_putstr_fd(arg, 1);
         count += addForwardChar(' ', list_flags.width - (len + 2));
     }
     else if (!list_flags.minus)
     {
         count += addForwardChar(' ', list_flags.width - (len + 2));
-        ft_putstr_fd("0x", 1);
-        ft_putstr_fd(arg, 1);
-        count = len + 2;
+        count += ft_putstr_fd("0x", 1);
+        count += ft_putstr_fd(arg, 1);
     }
     return (count);
 }
