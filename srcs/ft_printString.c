@@ -1,30 +1,35 @@
 #include "ft_printf.h"
 #include <stdio.h>
 
-int ft_printString(va_list arg_ptr, t_flags list_flags, int *count)
+int ft_abs(int num)
+{
+	if (num < 0)
+		return (-num);
+	return (num);
+}
+
+void	 ft_printString(va_list arg_ptr, t_flags list_flags, int *count)
 {
 	char* arg;
 	int len;
 
-	len = 0;
 	if (!(arg = ft_strdup(va_arg(arg_ptr, char*))))
 		arg = ft_strdup("(null)");
 	if (list_flags.precision < (int)ft_strlen(arg) && list_flags.precision != -1)
 		arg[list_flags.precision] = '\0';
 	len = ft_strlen(arg);
-	if (list_flags.width != 0 && !list_flags.minus)
+	if (list_flags.width != 0 && !list_flags.minus && list_flags.width > 0)
 	{
 		*count += addForwardChar(' ', list_flags.width - len);
-		ft_putstr_fd(arg, 1);
+		*count += ft_putstr_fd(arg, 1);
 	}
-	else if (list_flags.width != 0 && list_flags.minus)
+	else if ((list_flags.width != 0 && list_flags.minus) || list_flags.width < 0)
 	{
-		ft_putstr_fd(arg, 1);
-		*count += addForwardChar(' ', list_flags.width - len);
+		*count += ft_putstr_fd(arg, 1);
+		*count += addForwardChar(' ', ft_abs(list_flags.width) - len);
 	}
 	else
-		ft_putstr_fd(arg, 1);
+		*count += ft_putstr_fd(arg, 1);
 	free(arg);
-	return ((int)(*count + len));
 }
 

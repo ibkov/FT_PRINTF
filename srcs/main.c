@@ -2,10 +2,11 @@
 #include "ft_printf.h"
 
 int main() {
-	// printf("%u\n", 216);
-	ft_printf("%7u", 33);
+	// printf("%i, %d, %d, %d, %d, %s, %c, %d, %u, %x, %X\n", 8, -12, 123456789, 0, -12345678, "abcdefghijklmnop", 'a', 97, 4294967284, 4294967284, 4294967284);
+	// ft_printf("%i11.22, %10.d,", 8, -12);
+	printf("|%d", ft_printf("%c", 'a'));
 
-	// printf("%d\n", printf("hello %05%\n"));
-	// printf("%d", ft_printf("hello %05%\n"));
+	// printf("   len_o = %d\n\n   ", printf("%i, %d, %d, %d, %d, %s, %c, %d, %u, %x, %X", 8, -12, 123456789, 0, -12345678, "abcdefghijklmnop", 'a', 97, 4294967284, 4294967284, 4294967284));
+	// printf("   len-my = %d\n\n", ft_printf("%i, %d, %d, %d, %d, %s, %c, %d, %u, %x, %X", 8, -12, 123456789, 0, -12345678, "abcdefghijklmnop", 'a', 97, 4294967284, 4294967284, 4294967284));
 	return 0;
 }

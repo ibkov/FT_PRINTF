@@ -1,25 +1,23 @@
 #include "ft_printf.h"
 
-int ft_printChar(va_list arg_ptr, t_flags list_flags)
+void ft_printChar(va_list arg_ptr, t_flags list_flags, int *count)
 {
     int arg;
-    int len;
 
-    len = 1;
     arg = va_arg(arg_ptr, int);
     if (list_flags.width != 0 && !list_flags.minus)
 	{
-		while (list_flags.width > len++)
-			ft_putchar_fd(' ', 1);
+		*count += addForwardChar(' ', list_flags.width - 1);
 		ft_putchar_fd(arg, 1);
 	}
 	else if (list_flags.width != 0 && list_flags.minus)
 	{
 		ft_putchar_fd(arg, 1);
-		while (list_flags.width > len++)
-			ft_putchar_fd(' ', 1);
+		*count += addForwardChar(' ', list_flags.width - 1);
 	}
 	else
+	{
 		ft_putchar_fd(arg, 1);
-    return (0);
+		*count += 1;
+	}
 }

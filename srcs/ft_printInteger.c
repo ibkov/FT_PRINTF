@@ -18,13 +18,15 @@ int checkPrecision(t_flags list_flags, int num_int, int len)
     int count;
     int i;
 
-    count = 1;
+    count = 0;
     i = 0;
     if (num_int < 0 && list_flags.precision < len && !list_flags.zero)
+    {
         ft_putchar_fd('-', 1);
+        count++;
+    }
     else if (list_flags.precision > 0)
     {
-        count = 0;
         if (num_int < 0 && --i == -1)
         {
             ft_putchar_fd('-', 1);
@@ -61,7 +63,7 @@ int checkWidth(t_flags list_flags, int num_int, int len)
             count += addForwardChar(' ', list_flags.width - list_flags.precision);
     }
     else
-        count += addForwardChar(' ', list_flags.width - len);
+        count += addForwardChar(' ', ft_abs(list_flags.width) - len);
     return (count);
 }
 
@@ -71,7 +73,7 @@ int checkMinus(t_flags list_flags, int num_int, int len, char *arg)
 
     count = 0;
     (num_int < 0) ? arg++ : arg;
-    if (list_flags.minus)
+    if (list_flags.minus || list_flags.width < 0)
     {
         count += checkPrecision(list_flags, num_int, len);
         count += ft_strlen(arg);
