@@ -31,8 +31,8 @@ int main() {
 	// ft_printf("%*.*i, %*.*d, %*.*d, %*.*d, %*.*d, %*.*d, %*.*d, %*.*d", -2, 0, i, a, b, j, a, b, k, a, b, l, a, b, m, a, b, c, a, b, e, a, b, d);
 	// ft_printf("%c,  %-c, %1c, %*c,  %-*c,  %*c, %-*c\n", 12, 18, c, n[0], o[0], a, p[0], a, q[0], a, r[0], a, c);
 	// printf("%c,  %-c, %1c, %*c,  %-*c,  %*c, %-*c", 12, 18, c, n[0], o[0], a, p[0], a, q[0], a, r[0], a, c);
-	printf("%-*c|\n", ls4, '-');
-	ft_printf("%-*c|\n", 4, '-');
+	printf("%*c|\n", -4, '-');
+	ft_printf("%*c|\n", -4, '-');
 	
 	// ft_printf("%% *.5i 42 == |% *.5i|", 4, 42);
 
