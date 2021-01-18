@@ -32,7 +32,7 @@ int	ft_printf(const char *format, ...)
 			init_flags(&list_flags);
 			i++;
 			analysis_flags(format, &i, &list_flags, arg_ptr);
-			print_value(arg_ptr, list_flags, format, &i, &count);
+			count += print_value(arg_ptr, list_flags, format, &i);
 		}
 		i++;
 	}

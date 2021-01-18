@@ -24,12 +24,12 @@ typedef	struct	s_flags
 }		t_flags;
 
 int			ft_printf(const char *format, ...);
-void		ft_print_string(va_list arg_ptr, t_flags list_flags, int *count);
+int			ft_print_string(va_list arg_ptr, t_flags list_flags);
 void		init_flags(t_flags *list_flags);
 void		analysis_flags(const char *format, int *i, t_flags *list_flags,\
 va_list arg_ptr);
-void		print_value(va_list arg_ptr, t_flags list_flags, const char *format, int *i, int *count);
-void		ft_print_char(va_list arg_ptr, t_flags list_flags, int *count);
+int			print_value(va_list arg_ptr, t_flags list_flags, const char *format, int *i);
+int			ft_print_char(va_list arg_ptr, t_flags list_flags);
 int			ft_print_precent(t_flags list_flags);
 int			ft_print_integer(va_list arg_ptr, t_flags list_flags);
 int			add_forward_char(char c, int width);

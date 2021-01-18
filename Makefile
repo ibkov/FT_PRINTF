@@ -11,15 +11,15 @@ DIR_L = srcs/
 INCLUDES = -I includes/ -I libft/
 
 LIST = 		ft_printf.c \
-			ft_printString.c \
-			ft_analysisFlags.c\
-			ft_printValue.c \
-			ft_printChar.c \
-			ft_printPrecent.c \
-			ft_printInteger.c \
-			ft_printUnsingedInt.c \
-			ft_printPointer.c \
-			ft_printHexadecimal.c
+			ft_print_string.c \
+			ft_analysis_flags.c\
+			ft_print_value.c \
+			ft_print_char.c \
+			ft_print_precent.c \
+			ft_print_integer.c \
+			ft_print_unsinged_int.c \
+			ft_print_pointer.c \
+			ft_print_hexadecimal.c
 
 
 OBJS =$(SRCS:.c=.o)

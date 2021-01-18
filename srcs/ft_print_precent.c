@@ -1,17 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_precent.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: burswyck <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/12/09 18:46:33 by burswyck          #+#    #+#             */
+/*   Updated: 2020/12/09 18:46:47 by burswyck         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
-int ft_print_precent(t_flags list_flags)
+int	ft_print_precent(t_flags list_flags)
 {
-    int len;
-	char chr;
-	int count;
+	int		len;
+	char	chr;
+	int		count;
 
-    len = 1;
+	len = 1;
 	count = 1;
 	chr = ' ';
 	if (list_flags.zero)
 		chr = '0';
-    if (list_flags.width != 0 && !list_flags.minus)
+	if (list_flags.width != 0 && !list_flags.minus)
 	{
 		count += add_forward_char(chr, list_flags.width - len);
 		ft_putchar_fd('%', 1);
@@ -23,5 +35,5 @@ int ft_print_precent(t_flags list_flags)
 	}
 	else
 		ft_putchar_fd('%', 1);
-    return (count);
+	return (count);
 }
