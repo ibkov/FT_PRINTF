@@ -12,11 +12,11 @@
 
 #include "ft_printf.h"
 
-int print_value(va_list arg_ptr, t_flags list_flags, const char* format, int *i)
+int	print_value(va_list arg_ptr, t_flags list_flags, const char *format, int *i)
 {
-    int count;
+	int count;
 
-    count = 0;
+	count = 0;
 	if (format[*i] == 's')
 		count += ft_print_string(arg_ptr, list_flags);
 	if (format[*i] == 'c')
@@ -33,5 +33,5 @@ int print_value(va_list arg_ptr, t_flags list_flags, const char* format, int *i)
 		count += ft_print_hexadecimal(arg_ptr, list_flags, "0123456789abcdef");
 	if (format[*i] == 'X')
 		count += ft_print_hexadecimal(arg_ptr, list_flags, "0123456789ABCDEF");
-    return (count);
+	return (count);
 }

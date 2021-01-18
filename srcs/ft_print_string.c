@@ -19,20 +19,19 @@ int		ft_abs(int num)
 	return (num);
 }
 
-int	ft_print_string(va_list arg_ptr, t_flags list_flags)
+int		ft_print_string(va_list arg_ptr, t_flags list_flags)
 {
 	char	*arg;
 	int		len;
-	int 	count;
+	int		count;
 
 	count = 0;
 	if (!(arg = ft_strdup(va_arg(arg_ptr, char*))))
 		arg = ft_strdup("(null)");
-	if (list_flags.precision < (int)ft_strlen(arg) \
-	&& list_flags.precision != -1)
+	if (list_flags.precision < (int)ft_strlen(arg))
 		arg[list_flags.precision] = '\0';
 	len = ft_strlen(arg);
-	if (list_flags.width != 0 && !list_flags.minus && list_flags.width > 0)
+	if (!list_flags.minus && list_flags.width > 0)
 	{
 		count += add_forward_char(' ', list_flags.width - len);
 		count += ft_putstr_fd(arg, 1);
